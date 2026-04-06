@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering & Automation | HVAC Controls · BMS · PLC · SCADA</title>
+  <meta name="description"
+    content="Learn Engineering and Automation of HVAC Controls, BMS, PLC & SCADA Systems. Watch expert tutorials on Building Management Systems, Air Handling Units, BACnet, and more." />
+  <meta name="keywords"
+    content="HVAC Controls, BMS, PLC, SCADA, Building Management System, AHU, BACnet, Engineering Automation, VAV, FCU, PID Controller" />
+  <meta property="og:title" content="Engineering & Automation | HVAC Controls · BMS · PLC · SCADA" />
+  <meta property="og:description"
+    content="Expert tutorials on HVAC Controls, Building Management Systems, PLC & SCADA engineering." />
+  <meta property="og:image" content="banner.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo-link">
+        <img src="logoNew-short.png" alt="Engineering & Automation Logo" class="nav-logo-img" />
+        <div class="nav-brand">
+          <span class="nav-brand-title">Engineering <span class="red">&amp;</span> Automation</span>
+          <span class="nav-brand-sub">HVAC · BMS · PLC · SCADA</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+        <li><a href="#videos" class="nav-link" id="nav-videos">Videos</a></li>
+        <li><a href="#topics" class="nav-link" id="nav-topics">Topics</a></li>
+        <li><a href="#stats" class="nav-link" id="nav-stats">Stats</a></li>
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li>
+          <a href="https://www.youtube.com/@engineeringautomation" target="_blank" class="btn-subscribe"
+            id="nav-subscribe-btn">
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+              <path
+                d="M17.6 2.18C17.39 1.38 16.76.74 15.97.53 14.58.18 9 .18 9 .18s-5.58 0-6.97.35C1.24.74.61 1.38.4 2.18.06 3.58.06 7 .06 7s0 3.42.34 4.82c.21.8.84 1.44 1.63 1.65C3.42 13.82 9 13.82 9 13.82s5.58 0 6.97-.35c.79-.21 1.42-.85 1.63-1.65.34-1.4.34-4.82.34-4.82s0-3.42-.34-4.82zM7.2 10V4l4.67 3L7.2 10z"
+                fill="currentColor" />
+            </svg>
+            Subscribe
+          </a>
+        </li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== TOP VIDEOS CAROUSEL ===== -->
+  <section class="featured-section" id="featured">
+    <div class="container">
+      <div class="section-label">⭐ Most Popular</div>
+      <h2 class="section-title">Top Rated Tutorials</h2>
+      <div class="carousel-container" id="top-carousel">
+        <button class="carousel-nav prev" id="carousel-prev" aria-label="Previous Slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <div class="carousel-view">
+          <div class="carousel-track" id="carousel-track">
+            <!-- Dynamic slides injected here -->
+          </div>
+        </div>
+        <button class="carousel-nav next" id="carousel-next" aria-label="Next Slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+        <div class="carousel-indicators" id="carousel-indicators"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="banner.png" alt="Engineering & Automation Banner" class="hero-banner-img" />
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Educational Engineering Channel
+      </div>
+      <h1 class="hero-title">
+        Engineering <span class="gradient-text">&amp;</span> Automation
+      </h1>
+      <p class="hero-subtitle">
+        Master <strong>HVAC Controls</strong>, <strong>Building Management Systems</strong>,<br />
+        <strong>PLC</strong> &amp; <strong>SCADA</strong> with expert-led video tutorials
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="0" id="stat-subs">0</span>
+          <span class="hero-stat-label">Subscribers</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="0" id="stat-views">0</span>
+          <span class="hero-stat-label">Total Views</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="0" id="stat-vids">0</span>
+          <span class="hero-stat-label">Videos</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#videos" class="btn-primary" id="hero-watch-btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 2l10 6-10 6V2z" fill="currentColor" />
+          </svg>
+          Watch Videos
+        </a>
+        <a href="https://www.youtube.com/@engineeringautomation" target="_blank" class="btn-outline"
+          id="hero-channel-btn">
+          Visit Channel
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" id="scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEOS SECTION ===== -->
+  <section class="videos-section" id="videos">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-label">📹 All Videos</div>
+          <h2 class="section-title">Complete Video Library</h2>
+        </div>
+        <div class="filter-controls">
+          <div class="search-wrapper">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            <input type="text" id="search-input" class="search-input" placeholder="Search videos..."
+              aria-label="Search videos" />
+          </div>
+          <div class="filter-tabs" id="filter-tabs" role="tablist">
+            <button class="filter-tab active" data-filter="all" role="tab" id="filter-all">All</button>
+            <button class="filter-tab" data-filter="bms" role="tab" id="filter-bms">BMS</button>
+            <button class="filter-tab" data-filter="ahu" role="tab" id="filter-ahu">AHU</button>
+            <button class="filter-tab" data-filter="bacnet" role="tab" id="filter-bacnet">BACnet</button>
+            <button class="filter-tab" data-filter="controls" role="tab" id="filter-controls">Controls</button>
+          </div>
+          <select class="sort-select" id="sort-select" aria-label="Sort videos">
+            <option value="default">Default Order</option>
+            <option value="views-desc">Most Views</option>
+            <option value="views-asc">Least Views</option>
+            <option value="duration-desc">Longest First</option>
+            <option value="duration-asc">Shortest First</option>
+          </select>
+        </div>
+      </div>
+      <div class="videos-grid" id="videos-grid"></div>
+      <div class="no-results" id="no-results" style="display:none;">
+        <div class="no-results-icon">🔍</div>
+        <p>No videos match your search. Try different keywords.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO MODAL ===== -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close video player">✕</button>
+      <div class="modal-embed">
+        <iframe id="modal-iframe" src="" title="Video Player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="modal-info">
+        <div class="modal-meta" id="modal-meta"></div>
+        <h3 class="modal-title" id="modal-title-text"></h3>
+        <p class="modal-desc" id="modal-desc"></p>
+        <div class="modal-stats" id="modal-stats"></div>
+        <a href="#" class="btn-primary" id="modal-yt-link" target="_blank">Watch on YouTube →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TOPICS ===== -->
+  <section class="topics-section" id="topics">
+    <div class="container">
+      <div class="section-label">📚 Knowledge Areas</div>
+      <h2 class="section-title">Topics Covered</h2>
+      <div class="topics-grid" id="topics-grid">
+        <div class="topic-card" id="topic-bms">
+          <div class="topic-icon">🏢</div>
+          <h3>Building Management Systems</h3>
+          <p>BMS/BAS architecture, monitoring, control strategies, and history from beginner to advanced concepts.</p>
+          <div class="topic-count">4 videos</div>
+        </div>
+        <div class="topic-card" id="topic-hvac">
+          <div class="topic-icon">❄️</div>
+          <h3>HVAC Equipment</h3>
+          <p>Air Handling Units (AHU), Fan Coil Units (FCU), Variable Air Volume (VAV) systems explained in detail.</p>
+          <div class="topic-count">3 videos</div>
+        </div>
+        <div class="topic-card" id="topic-bacnet">
+          <div class="topic-icon">🔗</div>
+          <h3>BACnet Protocol</h3>
+          <p>Deep dives into BACnet architecture, objects, services, and the BACnet MSTP communication protocol.</p>
+          <div class="topic-count">2 videos</div>
+        </div>
+        <div class="topic-card" id="topic-controls">
+          <div class="topic-icon">⚙️</div>
+          <h3>Control Systems</h3>
+          <p>Fundamentals of control systems, open & closed loop systems, feedback control, and PID controllers.</p>
+          <div class="topic-count">2 videos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS / TIMELINE ===== -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="section-label">📊 Channel Analytics</div>
+      <h2 class="section-title">Channel Performance</h2>
+      <div class="stats-grid">
+        <div class="stat-card" id="stat-card-1">
+          <div class="stat-icon">👁️</div>
+          <div class="stat-value counter" data-target="0" id="channel-views-stat">0</div>
+          <div class="stat-label">Total Views</div>
+          <div class="stat-bar">
+            <div class="stat-bar-fill" style="--fill: 100%"></div>
+          </div>
+        </div>
+        <div class="stat-card" id="stat-card-2">
+          <div class="stat-icon">👥</div>
+          <div class="stat-value counter" data-target="0" id="channel-subs-stat">0</div>
+          <div class="stat-label">Subscribers</div>
+          <div class="stat-bar">
+            <div class="stat-bar-fill" style="--fill: 45%"></div>
+          </div>
+        </div>
+        <div class="stat-card" id="stat-card-3">
+          <div class="stat-icon">🎬</div>
+          <div class="stat-value counter" data-target="0" id="channel-vids-stat">0</div>
+          <div class="stat-label">Videos Published</div>
+          <div class="stat-bar">
+            <div class="stat-bar-fill" style="--fill: 20%"></div>
+          </div>
+        </div>
+        <div class="stat-card" id="stat-card-4">
+          <div class="stat-icon">📈</div>
+          <div class="stat-value">119K</div>
+          <div class="stat-label">Avg. Views / Video</div>
+          <div class="stat-bar">
+            <div class="stat-bar-fill" style="--fill: 65%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="views-chart-wrapper">
+        <h3 class="chart-title">Views Per Video</h3>
+        <div class="views-chart" id="views-chart"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="section-label">ℹ️ About the Channel</div>
+          <h2 class="section-title">Learn Engineering &amp; Automation</h2>
+          <p class="about-text">
+            <strong>Engineering &amp; Automation</strong> is a dedicated educational YouTube channel focused on
+            teaching the fundamentals and advanced concepts of HVAC Controls, Building Management Systems
+            (BMS/BAS), PLC, and SCADA systems.
+          </p>
+          <p class="about-text">
+            Founded in June 2020, the channel has grown to over <strong>24,900 subscribers</strong> and accumulated
+            more than <strong>1.3 million views</strong>, becoming a trusted resource for engineers, technicians,
+            and students worldwide.
+          </p>
+          <p class="about-disclaimer" style="font-size: 0.85rem; color: var(--text-muted); font-style: italic; margin-top: 1rem;">
+            * Content is based on personal experiences and industry standards; project-specific variations may apply. See full disclaimer in footer.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <span class="highlight-icon">✅</span>
+              <span>Clear, structured engineering tutorials</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">✅</span>
+              <span>Covers beginner to advanced topics</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">✅</span>
+              <span>Real-world HVAC control systems explained</span>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">✅</span>
+              <span>BACnet protocol deep dives</span>
+            </div>
+          </div>
+          <a href="https://www.youtube.com/@engineeringautomation" target="_blank" class="btn-primary"
+            id="about-channel-btn">
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+              <path
+                d="M17.6 2.18C17.39 1.38 16.76.74 15.97.53 14.58.18 9 .18 9 .18s-5.58 0-6.97.35C1.24.74.61 1.38.4 2.18.06 3.58.06 7 .06 7s0 3.42.34 4.82c.21.8.84 1.44 1.63 1.65C3.42 13.82 9 13.82 9 13.82s5.58 0 6.97-.35c.79-.21 1.42-.85 1.63-1.65.34-1.4.34-4.82.34-4.82s0-3.42-.34-4.82zM7.2 10V4l4.67 3L7.2 10z"
+                fill="currentColor" />
+            </svg>
+            Subscribe on YouTube
+          </a>
+        </div>
+        <div class="about-visual">
+          <div class="about-logo-wrap" style="background: transparent; border: none; box-shadow: none;">
+            <img src="logoNew-short.png" alt="Engineering & Automation" class="about-logo" />
+            <div class="about-logo-ring"></div>
+            <div class="about-logo-ring ring2"></div>
+          </div>
+          <div class="channel-info-card">
+            <div class="ci-row">
+              <span class="ci-label">Channel</span>
+              <span class="ci-value">@engineeringautomation</span>
+            </div>
+            <div class="ci-row">
+              <span class="ci-label">Joined</span>
+              <span class="ci-value">8 June 2020</span>
+            </div>
+            <div class="ci-row">
+              <span class="ci-label">Language</span>
+              <span class="ci-value">English</span>
+            </div>
+            <div class="ci-row">
+              <span class="ci-label">Category</span>
+              <span class="ci-value">Science &amp; Technology</span>
+            </div>
+            <div class="ci-row">
+              <span class="ci-label">Playlist</span>
+              <a href="https://www.youtube.com/playlist?list=PLw4SDs8Yetc5ZUFWedk4J-c9nekw_N0nJ" target="_blank"
+                class="ci-value ci-link">BMS/BAS/IBMS</a>
+            </div>
+            <div class="ci-row">
+              <span class="ci-label">Email</span>
+              <a href="mailto:ea.learnautomation@gmail.com" class="ci-value ci-link">ea.learnautomation@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUBSCRIBE CTA ===== -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-card" id="cta-card">
+        <div class="cta-glow"></div>
+        <h2 class="cta-title">Ready to Master Engineering &amp; Automation?</h2>
+        <p class="cta-sub">Join <span id="cta-subs-count">24,900+</span> engineers and technicians learning HVAC
+          Controls, BMS &amp; more — for free.</p>
+        <a href="https://www.youtube.com/@engineeringautomation" target="_blank" class="btn-cta" id="cta-subscribe-btn">
+          <svg width="20" height="16" viewBox="0 0 18 14" fill="none">
+            <path
+              d="M17.6 2.18C17.39 1.38 16.76.74 15.97.53 14.58.18 9 .18 9 .18s-5.58 0-6.97.35C1.24.74.61 1.38.4 2.18.06 3.58.06 7 .06 7s0 3.42.34 4.82c.21.8.84 1.44 1.63 1.65C3.42 13.82 9 13.82 9 13.82s5.58 0 6.97-.35c.79-.21 1.42-.85 1.63-1.65.34-1.4.34-4.82.34-4.82s0-3.42-.34-4.82zM7.2 10V4l4.67 3L7.2 10z"
+              fill="currentColor" />
+          </svg>
+          Subscribe — It's Free
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logoNew-long.png" alt="EA Logo" class="footer-logo" style="height: 60px; width: auto; margin-bottom: 1rem;" />
+          <p class="footer-desc">Educational content for HVAC Controls, BMS, PLC &amp; SCADA professionals and learners.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="#topics">HVAC Controls</a></li>
+            <li><a href="#topics">BMS / BAS</a></li>
+            <li><a href="#topics">BACnet Protocol</a></li>
+            <li><a href="#topics">Control Systems</a></li>
+            <li><a href="#topics">PID Controllers</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Channel</h4>
+          <ul>
+            <li><a href="https://www.youtube.com/@engineeringautomation" target="_blank">YouTube Channel</a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLw4SDs8Yetc5ZUFWedk4J-c9nekw_N0nJ" target="_blank">BMS
+                Playlist</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ReEp0HH91ZU" target="_blank">Top Video</a></li>
+          </ul>
+        </div>
+        <div class="footer-links" id="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:ea.learnautomation@gmail.com">Email Us</a></li>
+            <li><a href="https://www.youtube.com/@engineeringautomation/about" target="_blank">Channel About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; text-align: center;">
+        <p><strong>Disclaimer:</strong> The videos and tutorials on the Engineering & Automation YouTube channel are based on personal experiences and established industry standards. They may not encompass every real-world scenario or project variation across different regions and projects. The channel and this website are not liable for any actions, damages, or consequences resulting from the application of this information. Always consult project-specific documentation and local regulations.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Engineering &amp; Automation. All video content belongs to the original YouTube channel.</p>
+        <p>Built with ❤️ for the engineering community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
